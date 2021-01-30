@@ -1,0 +1,74 @@
+.header{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    box-shadow: 2px 1px 2px rgb(197, 197, 197);
+
+    &-top{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding:1.3rem;
+        border-bottom: 1px solid rgb(194, 194, 194);
+        &-logo{
+            font-family: 'Abril Fatface', cursive;
+            font-size: 2rem;
+        }
+        .cart-icon{
+            position: relative;
+            height: 100%;
+            width: 40px;
+            cursor: pointer;
+
+            .item-count{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -37%);
+
+            }
+        }
+    }
+
+    &-bottom{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+        .navigation{
+            list-style: none;
+            width: 40%;
+            display: flex;
+            justify-content: space-evenly;
+
+            .link{
+                height: 100%;
+                display: inline-block;
+                position: relative;
+                font-weight: 700;
+                padding: 1rem 0;
+                cursor: pointer;
+
+                &::after {
+                    content: '';
+                    height: 0;
+                    width: 100%;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    background-color: black;
+                    transition: height 0.1s ease-in-out;
+                }
+
+                &:hover{
+                    color: rgb(97, 97, 97);
+                    &::after{
+                        height: 2px;
+                    }
+                }
+            }
+        }
+    }
+}
